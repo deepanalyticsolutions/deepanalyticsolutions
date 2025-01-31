@@ -8,70 +8,88 @@ This document explains the conventions we follow for commit messages in this rep
 
 Each commit message should follow this structure:
 
-1. **Type**: The category of the commit. Examples include:
-   - `feat`: A new feature.
-   - `fix`: A bug fix.
-   - `docs`: Documentation updates.
+1. **Type**: The category of the commit. Examples:
+   - `feat`: Adding a new feature.
+   - `fix`: Fixing a bug.
+   - `docs`: Updating documentation.
    - `style`: Code style changes (e.g., formatting).
    - `refactor`: Code changes without altering behavior.
    - `test`: Adding or updating tests.
-   - `chore`: Routine tasks like updates to dependencies or CI.
+   - `chore`: Routine tasks like dependency updates or CI/CD maintenance.
 
-2. **Scope**: (Optional) A brief context of the code affected (e.g., `api`, `auth`, `build`).
+2. **Scope** (Optional): A brief context of the affected code (e.g., `api`, `auth`, `build`).
 
-3. **Subject**: A short summary of the change (max 50 characters, written in the present tense).
+3. **Subject**: A short summary of the change (max. 50 characters, written in the present tense).
 
-4. **Body**: (Optional) A detailed description of the change. Line width should not exceed 72 characters. Explain the *what*, *why*, and *how*.
+4. **Body** (Optional): A detailed description of the change. Line width should not exceed 72 characters. Explain the *what*, *why*, and *how*.
 
-5. **Footer**: (Optional) References to related issues or breaking changes.
+5. **Footer** (Optional): References to related issues or breaking changes.
 
 ---
 
 ## **Template**
 
 Use the following template for all commit messages:
-    <type>(<scope>): <subject>
-    <body> <footer>
+
+```plaintext
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
 
 ---
 
-## **Exemples**
+## **Examples**
 
-1. **Example 1**: Adding a New Feature
-    feat(user-auth): add login functionality
+1. **Adding a new feature**
 
-    Implemented login functionality with email and password validation.
-    This completes phase one of the user authentication system.
+```plaintext
+feat(user-auth): add login functionality
 
-    Resolves #123
+Implemented login functionality with email and password validation.
+This completes phase one of the user authentication system.
 
+Resolves #123
+```
 
-2. **Example 2**: Fixing a Bug
-    fix(api): resolve timeout issue in fetch requests
+2. **Fixing a bug**
 
-    Updated fetch request implementation to include proper timeout handling
-    using AbortController. This prevents hanging requests on slow networks.
+```plaintext
+fix(api): resolve timeout issue in fetch requests
 
-    Closes #456
+Updated fetch request implementation to include proper timeout handling
+using AbortController. This prevents hanging requests on slow networks.
 
+Closes #456
+```
 
-3. **Example 3**: Updating Documentation
-    docs(readme): add setup instructions
+3. **Updating documentation**
 
-    Added a new section in the README detailing how to set up the project locally.
-    Included information about dependencies and configuration.
+```plaintext
+docs(readme): add setup instructions
 
+Added a new section in the README detailing how to set up
+the project locally. Included information about dependencies and configuration.
+```
 
-4. **Example 4**: Refactoring Code
-    refactor(database): optimize query handling in users table
+4. **Refactoring code**
 
-    Optimized SQL queries in the users table for faster execution.
-    No changes to external APIs.
+```plaintext
+refactor(database): optimize SQL query handling in users table
+
+Optimized SQL queries for faster execution.
+No changes to external APIs.
+```
 
 ---
 
-**Notes**:
-    Be concise: Avoid unnecessary details in the subject line.
-    Use imperative mood: Write as if giving a command, e.g., "Add feature" rather than "Added feature."
-    Link issues: Always include relevant issue numbers in the footer (Resolves #<issue_number>).
-    Follow line limits: Keep the subject under 50 characters and body lines under 72 characters.
+## **Notes**
+
+- **Be concise**: Avoid unnecessary details in the subject line.
+- **Use imperative mood**: Write as if giving a command (e.g., "Add feature" instead of "Added feature").
+- **Link issues**: Always include relevant issue numbers in the footer (`Resolves #<issue_number>`).
+- **Follow line limits**:
+  - Subject: max. 50 characters.
+  - Body: lines of max. 72 characters.
